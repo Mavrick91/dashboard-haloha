@@ -1,7 +1,14 @@
 // @flow
 
 import React from 'react';
+import { BrowserRouter, Route } from 'react-router-dom';
 
-const AppContainer = () => <div />;
+import Dashboard from './scenes/Dashboard';
+
+const AppContainer = () => (
+  <BrowserRouter>
+    <Route exact path="/" component={Dashboard} />
+  </BrowserRouter>
+);
 
 export default AppContainer;
