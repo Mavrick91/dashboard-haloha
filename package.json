@@ -8,17 +8,24 @@
     "react-scripts": "1.1.5"
   },
   "scripts": {
-    "flow": "flow",
+    "flow": "./node_modules/.bin/flow",
+    "eslint": "./node_modules/.bin/eslint src/**/*.js src/**/*.jsx",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
   },
   "pre-commit": [
-    "flow"
+    "flow",
+    "eslint"
   ],
   "devDependencies": {
     "babel-preset-flow": "^6.23.0",
+    "eslint": "^5.6.0",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-jsx-a11y": "^6.1.1",
+    "eslint-plugin-react": "^7.11.1",
     "flow-bin": "^0.81.0",
     "pre-commit": "^1.2.2"
   }
