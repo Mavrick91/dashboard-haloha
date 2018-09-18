@@ -1,9 +1,6 @@
 module.exports = {
-  extends: 'airbnb',
-  parserOptions: { ecmaVersion: 6 },
-  env: { es6: true, browser: true },
+  extends: '@callstack',
   rules: {
-    'react/jsx-filename-extension': 0,
-    'react/prefer-stateless-function': 0,
+    'import/no-unresolved': 0,
   },
 };
