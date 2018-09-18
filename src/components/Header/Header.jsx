@@ -3,6 +3,7 @@
 import React, { Component } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
+import ButtonUpdate from '../ButtonUpdate';
 import mignonne from '../../mignonne.jpg';
 
 type Props = {};
@@ -21,6 +22,7 @@ export default class Header extends Component<Props> {
               </div>
               <div className="information__attendees">
                 <div className="attendees__count">240 PARTICIPANTS</div>
+                <ButtonUpdate />
               </div>
             </div>
             <div className="information__profile">
