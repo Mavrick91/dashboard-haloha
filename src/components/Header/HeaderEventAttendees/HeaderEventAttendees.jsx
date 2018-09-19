@@ -5,16 +5,25 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 import ButtonUpdate from '../../ButtonUpdate';
 
-export default class HeaderEventAttendees extends Component<{}> {
+type Props = {
+  cmsHeader: HeaderType,
+  attendeesCount: number,
+};
+export default class HeaderEventAttendees extends Component<Props> {
   render() {
+    const {
+      cmsHeader: { myEvent, attendees },
+      attendeesCount,
+    } = this.props;
+
     return (
       <div className="wrapper__event-attendees">
         <div className="information__event">
           <FontAwesomeIcon icon="th" />
-          <span className="event">MES ÉVÈNEMENTS</span>
+          <span className="event">{myEvent}</span>
         </div>
         <div className="information__attendees">
-          <div className="attendees__count">240 PARTICIPANTS</div>
+          <div className="attendees__count">{`${attendeesCount} ${attendees}`}</div>
           <ButtonUpdate />
         </div>
       </div>
