@@ -5,12 +5,14 @@ import {
   faTh,
   faSearch,
   faPlusCircle,
+  faAngleUp,
+  faAngleDown,
 } from '@fortawesome/free-solid-svg-icons';
 
 import AppContainer from './AppContainer';
 
 import './css/index.css';
 
-library.add(faTh, faSearch, faPlusCircle);
+library.add(faTh, faSearch, faPlusCircle, faAngleUp, faAngleDown);
 
 ReactDOM.render(<AppContainer />, document.getElementById('root'));

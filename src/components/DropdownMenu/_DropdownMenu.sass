@@ -1,0 +1,45 @@
+.dropdown-menu
+	margin-right: $medium
+	position: relative
+	color: $color-dropdown
+	font-size: $font-size-small
+	min-width: 170px
+	max-width: 170px
+
+	&:hover
+		cursor: pointer
+
+	.dropdown-menu__wrapper-title
+		display: flex
+		align-items: center
+		justify-content: space-between
+		border: 1px solid #d0d8e4
+		border-radius: 10px
+		padding: $small $medium
+
+		.dropdown-menu__selected-item
+
+			& + svg
+				color: $main-dark-color
+				font-size: $font-size-x-small
+				margin-left: $medium 
+
+	.dropdown-menu__wrapper-list
+		.dropdown-menu__list
+			position: absolute
+			top: 40px
+			left: 0
+			right: 0
+			border: 1px solid #d0d8e4
+			border-radius: 10px
+			padding: 0
+			overflow: hidden
+			box-shadow: 0 0 10px 1px $color-hover-dropdown
+
+			.dropdown-menu__list-item
+				padding: $small $medium
+				list-style-type: none
+
+				&:hover
+					background: $color-hover-dropdown
+					color: $main-dark-color
