@@ -1,3 +1,13 @@
+declare type CMSSidebar = {
+  cmsProgression: {
+    title: string,
+    subtitle: string,
+  },
+  cmsSteps: {
+    title: string,
+  },
+};
+
 declare type HeaderType = {
   myEvent: string,
   attendees: string,
@@ -7,4 +17,5 @@ declare type HeaderType = {
 
 declare type CMSType = {
   header: HeaderType,
+  sidebar: CMSSidebar,
 };

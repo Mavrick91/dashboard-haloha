@@ -4,7 +4,9 @@ import { library } from '@fortawesome/fontawesome-svg-core';
 import {
   faTh,
   faSearch,
+  faArrowLeft,
   faPlusCircle,
+  faCircle,
   faAngleUp,
   faAngleDown,
   faHeart,
@@ -19,7 +21,9 @@ import './css/index.css';
 
 library.add(
   faTh,
+  faArrowLeft,
   faSearch,
+  faCircle,
   faPlusCircle,
   faAngleUp,
   faAngleDown,

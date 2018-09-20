@@ -4,6 +4,14 @@ export const queryCMS = gql`
   {
     allDatas {
       attendeesCount
+      progression {
+        percentage
+        steps {
+          id
+          validate
+          stepName
+        }
+      }
       events {
         id
         name
@@ -14,6 +22,15 @@ export const queryCMS = gql`
       }
     }
     allCMses {
+      sidebar {
+        cmsProgression {
+          title
+          subtitle
+        }
+        cmsSteps {
+          title
+        }
+      }
       header {
         attendees
         help
