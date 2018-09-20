@@ -5,7 +5,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 type Item = {
   id: number,
-  title: string,
+  name: string,
 };
 
 type Props = {
@@ -67,7 +67,7 @@ export default class DropdownMenu extends Component<Props, State> {
           onClick={() => this.toggleList()}
         >
           <div className="dropdown-menu__selected-item">
-            {itemSelected.title}
+            {itemSelected.name}
           </div>
           <FontAwesomeIcon
             icon={`${listOpen ? 'angle-up' : 'angle-down'}`}
@@ -88,7 +88,7 @@ export default class DropdownMenu extends Component<Props, State> {
                     })
                   }
                 >
-                  {item.title}
+                  {item.name}
                 </li>
               ))}
             </ul>

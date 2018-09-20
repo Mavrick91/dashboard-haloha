@@ -11,6 +11,10 @@ export const queryCMS = gql`
     }
     Data(id: "cjm8h5vfu15fl0166qhv3etkh") {
       attendeesCount
+      events {
+        id
+        name
+      }
     }
   }
 `;

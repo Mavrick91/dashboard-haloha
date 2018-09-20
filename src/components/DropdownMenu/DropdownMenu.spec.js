@@ -56,7 +56,7 @@ describe('<DropdownMenu />', () => {
 
   describe('when clicking an item', () => {
     it('should update the state', () => {
-      expect(wrapper.state().itemSelected).to.equal({
+      expect(wrapper.state().itemSelected).to.deep.equal({
         id: 0,
         title: 'Tous les événements',
       });

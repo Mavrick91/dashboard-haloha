@@ -22,7 +22,7 @@ export default class Dashboard extends Component<{}> {
                 attendeesCount={data.Data.attendeesCount}
               />
               <div>Dashboard</div>
-              <ResearchEvent />
+              <ResearchEvent events={data.Data.events} />
             </div>
           );
         }}
