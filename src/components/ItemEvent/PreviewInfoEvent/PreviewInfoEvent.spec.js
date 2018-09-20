@@ -38,7 +38,7 @@ describe('<PreviewInfoEvent />', () => {
   });
   it("should display event's date", () => {
     expect(wrapper.find('.date').text()).to.deep.equal(
-      moment(props.event.date).format('MM/DD/YYYY')
+      moment(props.event.date).format('DD MM YYYY')
     );
   });
   it("should display event's language", () => {

@@ -5,10 +5,12 @@ export const queryCMS = gql`
     allDatas {
       attendeesCount
       events {
+        id
         name
         location
         date
         language
+        backgroundImage
       }
     }
     allCMses {
