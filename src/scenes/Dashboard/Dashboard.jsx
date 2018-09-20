@@ -16,16 +16,21 @@ export default class Dashboard extends Component<{}> {
           if (loading) return <div>Loading ...</div>;
           if (error) return <div>Error !</div>;
 
-          const { dashboard, header } = data.allCMses[0];
+          const {
+            dashboard: {
+              page: { event },
+            },
+            header,
+          } = data.allCMses[0];
           const { attendeesCount, events } = data.allDatas[0];
 
           return (
             <div className="dashboard">
               <Header cmsHeader={header} attendeesCount={attendeesCount} />
-              <div>
+              <div className="dashboard__content">
                 <ResearchEvent
-                  filterEvent={dashboard.page.event.filterEvent}
-                  placeholder={dashboard.page.event.placeholder}
+                  filterEvent={event.filterEvent}
+                  placeholder={event.placeholder}
                 />
                 <ItemEvent events={events} />
               </div>

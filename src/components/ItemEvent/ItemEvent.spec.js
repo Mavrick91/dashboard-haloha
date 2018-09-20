@@ -41,7 +41,7 @@ describe('<ItemEvent />', () => {
   describe('when clicking the component', () => {
     it('should trigger the function', () => {
       wrapper
-        .find('div')
+        .find('.item-event')
         .at(0)
         .simulate('click');
       expect(props.onClick).to.be.calledOnce;
