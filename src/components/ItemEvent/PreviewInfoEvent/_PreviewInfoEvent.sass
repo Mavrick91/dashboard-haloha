@@ -1,0 +1,31 @@
+.information-event
+	z-index: 20
+	color: white
+	padding: $small
+	align-self: flex-start
+	cursor: pointer
+	width: 100%
+
+	.information-event__name
+		font-weight: bold
+		font-size: $font-size-regular
+
+	.information-event__location
+		font-weight: lighter
+		font-size: $font-size-small
+
+	.information-event__date-language
+		font-size: $font-size-small
+		font-weight: lighter
+		display: flex
+		justify-content: space-between
+		align-items: center
+
+		.language
+			font-weight: bold
+			border: 1px solid white
+			border-radius: 3px
+			padding: $xx-small
+
+	& > div
+		margin: $small 0
