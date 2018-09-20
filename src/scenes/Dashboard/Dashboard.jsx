@@ -5,6 +5,7 @@ import { Query } from 'react-apollo';
 
 import { queryCMS } from '../../graphql/queries/cms';
 import Header from '../../components/Header';
+import ResearchEvent from '../../components/ResearchEvent';
 
 export default class Dashboard extends Component<{}> {
   render() {
@@ -21,6 +22,7 @@ export default class Dashboard extends Component<{}> {
                 attendeesCount={data.Data.attendeesCount}
               />
               <div>Dashboard</div>
+              <ResearchEvent events={data.Data.events} />
             </div>
           );
         }}
