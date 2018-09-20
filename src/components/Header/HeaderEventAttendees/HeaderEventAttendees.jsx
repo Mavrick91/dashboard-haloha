@@ -9,10 +9,11 @@ type Props = {
   cmsHeader: HeaderType,
   attendeesCount: number,
 };
+
 export default class HeaderEventAttendees extends Component<Props> {
   render() {
     const {
-      cmsHeader: { myEvent, attendees },
+      cmsHeader: { myEvent, attendees, update },
       attendeesCount,
     } = this.props;
 
@@ -24,7 +25,7 @@ export default class HeaderEventAttendees extends Component<Props> {
         </div>
         <div className="information__attendees">
           <div className="attendees__count">{`${attendeesCount} ${attendees}`}</div>
-          <ButtonUpdate />
+          <ButtonUpdate updateText={update} />
         </div>
       </div>
     );

@@ -2,7 +2,7 @@
 
 import React, { Component } from 'react';
 
-type Props = { onClick?: () => void };
+type Props = { onClick?: () => void, updateText: string };
 
 class ButtonUpdate extends Component<Props> {
   static defaultProps = {
@@ -10,11 +10,11 @@ class ButtonUpdate extends Component<Props> {
   };
 
   render() {
-    const { onClick } = this.props;
+    const { onClick, updateText } = this.props;
 
     return (
       <div className="button-update" onClick={onClick}>
-        <div className="button-update__text">METTRE A NIVEAU</div>
+        <div className="button-update__text">{updateText}</div>
       </div>
     );
   }

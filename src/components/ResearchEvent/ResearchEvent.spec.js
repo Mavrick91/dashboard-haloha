@@ -40,12 +40,6 @@ describe('<ResearchEvent />', () => {
     expect(wrapper.find(DropdownMenu)).to.have.lengthOf(1);
   });
 
-  it('should have the correct props for <DropdownMenu />', () => {
-    expect(wrapper.find(DropdownMenu).props().items).to.deep.equal([
-      { id: 0, name: 'papa' },
-    ]);
-  });
-
   describe('when pressing the `plus-circle`', () => {
     it('should trigger the function onClick', () => {
       wrapper
