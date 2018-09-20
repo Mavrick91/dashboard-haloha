@@ -14,6 +14,7 @@ export const queryCMS = gql`
       }
       events {
         id
+        available
         name
         location
         date
