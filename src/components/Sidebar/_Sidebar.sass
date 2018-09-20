@@ -1,0 +1,39 @@
+.sidebar
+	display: flex
+	width: 5%
+	height: calc(100vh - #{$header-height})
+	background-color: white
+	position: relative
+
+	.sidebar__icon-wrapper
+		width: 20px		
+		color: $main_lightgrey_color
+		cursor: pointer
+		position: absolute
+		top: $large
+		right: 50%
+		transform: translateX(50%)
+
+		.sidebar__icon
+			font-size: 20px
+	
+	.sidebar__content
+		display: none
+		padding: $large
+		transition: flex 1s ease-out
+
+.sidebar--active
+	width: 35%
+
+	& > .sidebar__icon-wrapper
+		right: $large
+		transform: translateX(0%)
+
+		.sidebar__icon
+			transform: rotate(180deg)
+
+	& > .sidebar__content
+		display: flex
+		flex-direction: column
+		width: 100%
+	
