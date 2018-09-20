@@ -10,10 +10,16 @@ chai.use(sinonChai);
 
 describe('<ButtonUpdate />', () => {
   const spy = sinon.spy();
-  const wrapper = shallow(<ButtonUpdate onClick={spy} />);
+  const wrapper = shallow(
+    <ButtonUpdate onClick={spy} updateText="update me" />
+  );
 
   it('should render the component', () => {
     expect(wrapper).to.have.lengthOf(1);
+  });
+
+  it('should have the correct props', () => {
+    expect(wrapper.instance().props.updateText).to.equal('update me');
   });
 
   describe('when pressing the button', () => {

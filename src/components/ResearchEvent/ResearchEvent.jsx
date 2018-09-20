@@ -5,7 +5,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import DropdownMenu from '../DropdownMenu';
 
 type Props = {
-  events: Array<{
+  placeholder: string,
+  filterEvent: Array<{
     id: number,
     name: string,
   }>,
@@ -20,7 +21,7 @@ export default class ResearchEvent extends Component<Props> {
   };
 
   render() {
-    const { events, onClick } = this.props;
+    const { filterEvent, placeholder, onClick } = this.props;
 
     return (
       <div className="research-event">
@@ -28,13 +29,13 @@ export default class ResearchEvent extends Component<Props> {
           <FontAwesomeIcon icon="search" />
           <input
             type="text"
-            placeholder="Rechercher un événement"
+            placeholder={placeholder}
             size="34"
             onKeyPress={this.handleKeyPress}
           />
         </div>
         <div className="research-event__dropdown-add">
-          <DropdownMenu items={events} />
+          <DropdownMenu items={filterEvent} />
           <FontAwesomeIcon icon="plus-circle" onClick={onClick} />
         </div>
       </div>

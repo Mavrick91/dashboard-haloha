@@ -11,6 +11,7 @@ describe('<HeaderEventAttendees />', () => {
     cmsHeader: {
       myEvent: 'myEvent',
       attendees: 'PARTICIPANTS',
+      update: 'MISE À NIVEAU',
     },
     attendeesCount: 230,
   };
@@ -25,6 +26,7 @@ describe('<HeaderEventAttendees />', () => {
     expect(wrapper.instance().props.cmsHeader).to.deep.equal({
       myEvent: 'myEvent',
       attendees: 'PARTICIPANTS',
+      update: 'MISE À NIVEAU',
     });
   });
 
