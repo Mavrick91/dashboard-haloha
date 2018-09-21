@@ -13,14 +13,16 @@ describe('<ExtraOptions />', () => {
   let spyWriteComment;
   let spyLikeEvent;
   let spyCopyInfoEvent;
-  let spyExpandOptions;
+  let spyDelete;
+  let spyTeam;
   let wrapper;
 
   beforeEach(() => {
     spyWriteComment = sinon.spy(ExtraOptions.prototype, 'writeComment');
     spyLikeEvent = sinon.spy(ExtraOptions.prototype, 'likeEvent');
     spyCopyInfoEvent = sinon.spy(ExtraOptions.prototype, 'copyInfoEvent');
-    spyExpandOptions = sinon.spy(ExtraOptions.prototype, 'expandOptions');
+    spyDelete = sinon.spy(ExtraOptions.prototype, 'delete');
+    spyTeam = sinon.spy(ExtraOptions.prototype, 'team');
 
     wrapper = shallow(<ExtraOptions />);
   });
@@ -29,7 +31,8 @@ describe('<ExtraOptions />', () => {
     spyWriteComment.restore();
     spyLikeEvent.restore();
     spyCopyInfoEvent.restore();
-    spyExpandOptions.restore();
+    spyDelete.restore();
+    spyTeam.restore();
   });
 
   it('should render the component', () => {
@@ -64,11 +67,27 @@ describe('<ExtraOptions />', () => {
     expect(spyCopyInfoEvent).calledOnce;
   });
 
-  it('should trigger `expandOptions` method', () => {
+  it('should trigger `delete` method', () => {
     wrapper
       .find(FontAwesomeIcon)
       .at(3)
       .simulate('click');
-    expect(spyExpandOptions).calledOnce;
+    wrapper
+      .find('li')
+      .at(0)
+      .simulate('click');
+    expect(spyDelete).calledOnce;
+  });
+
+  it('should trigger `team` method', () => {
+    wrapper
+      .find(FontAwesomeIcon)
+      .at(3)
+      .simulate('click');
+    wrapper
+      .find('li')
+      .at(1)
+      .simulate('click');
+    expect(spyTeam).calledOnce;
   });
 });
