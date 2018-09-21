@@ -2,6 +2,7 @@
 	color: white
 	opacity: 0
 	margin: $medium
+	position: relative
 
 	& > svg:hover
 		color: $main-light-color
@@ -9,3 +10,36 @@
 	& > svg
 		& + svg
 			margin-left: $medium
+
+	.extra-options__options
+		overflow: hidden
+		position: absolute
+		list-style-type: none
+		background: white
+		color: $color-dropdown
+		padding: 0
+		border: 1px solid #d0d8e4
+		border-radius: 10px
+		top: -20px
+		right: 0
+	
+		&:hover
+			cursor: pointer
+
+		& > li
+			padding: $small
+			display: flex
+			align-items: center
+			justify-content: flex-start
+
+			& > svg
+				margin: $small 
+
+			&:hover > svg
+				color: $light-purple
+
+			&:hover
+				background: $color-hover-dropdown
+				color: $main-dark-color
+
+

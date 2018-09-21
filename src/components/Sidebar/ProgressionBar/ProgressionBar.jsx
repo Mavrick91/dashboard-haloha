@@ -17,7 +17,7 @@ class ProgressionBar extends Component<Props> {
 
     return (
       <div className="progression-bar">
-        <p className="progression-bar__title">{cmsProgression.title}</p>
+        <h4 className="progression-bar__title">{cmsProgression.title}</h4>
         <Line
           percent={progression}
           strokeWidth="1.5"
